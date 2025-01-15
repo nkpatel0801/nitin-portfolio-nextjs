@@ -2,12 +2,12 @@
 
 import Image from "next/image"
 import AnimatedText from "../common/AnimatedText"
-// import FloatingElements from "../common/FloatingElements" // 需要用户自己添加，主页背景动画
+import FloatingElements from "../common/FloatingElements"
 
 export default function Hero() {
   return (
     <section id="home" className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {/* <FloatingElements /> */}
+      <FloatingElements />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <AnimatedText className="flex flex-col items-center sm:items-start gap-4">
           <Image
@@ -18,9 +18,9 @@ export default function Hero() {
             height={120}
             priority
           />
-          <h1 className="text-4xl font-bold">你的名字</h1>
+          <h1 className="text-4xl font-bold">Zhiyuan Song</h1>
           <p className="text-lg text-foreground/80 font-[family-name:var(--font-geist-mono)]">
-            你的职位/身份
+            Full Stack Developer
           </p>
         </AnimatedText>
 
@@ -28,7 +28,7 @@ export default function Hero() {
           className="max-w-2xl text-center sm:text-left"
         >
           <p className="text-foreground/80 leading-relaxed">
-            在这里添加一句简短的个人介绍,例如:你的学校、专业、年级,以及你正在寻找的机会。
+            UCSC Computer Science Junior | Aspiring SDE Intern building robust Full Stack solutions.
           </p>
         </AnimatedText>
 
@@ -37,14 +37,16 @@ export default function Hero() {
         >
           <a
             className="
+              relative
+              z-20
               rounded-full border border-solid border-black/[.08] dark:border-white/[.145] 
               transition-colors flex items-center justify-center 
               hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
-              h-12                                    
-              px-5                                   
-              text-base                              
+              h-12                                    // 固定高度
+              px-5                                   // 固定内边距
+              text-base                              // 固定字体大小
             "
-            href="你的GitHub链接"
+            href="https://github.com/songzhiyuan98"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,11 +54,11 @@ export default function Hero() {
               className="invert dark:invert-0 mr-2"
               src="/github.svg"
               alt="GitHub"
-              width={20}                             
+              width={20}
               height={20}
-              sizes="20px"                          
+              sizes="20px"
             />
-            GitHub
+            <span className="relative z-20">GitHub</span>
           </a>
           <a
             className="
@@ -64,15 +66,23 @@ export default function Hero() {
               transition-colors flex items-center justify-center 
               hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
               hover:border-transparent 
-              h-12                                   
-              px-5                                   
-              text-base                              
-              min-w-44                              
+              h-12                                   // 固定高度
+              px-5                                   // 固定内边距
+              text-base                              // 固定字体大小
+              min-w-44                              // 固定最小宽度
             "
             href="/resume.pdf"
             target="_blank"
           >
-            查看简历
+            <Image
+              className="dark:invert mr-2"
+              src="/resume.svg"
+              alt="Resume"
+              width={20}
+              height={20}
+              sizes="20px"
+            />
+            View Resume
           </a>
         </AnimatedText>
       </main>
@@ -82,7 +92,7 @@ export default function Hero() {
       >
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="mailto:你的邮箱"
+          href="mailto:songzhiyuan98@gmail.com"
         >
           <Image
             aria-hidden
@@ -92,11 +102,11 @@ export default function Hero() {
             width={16}
             height={16}
           />
-          联系我
+          Email Me
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="你的LinkedIn链接"
+          href="https://www.linkedin.com/in/zhiyuan-song-761651217/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -109,20 +119,6 @@ export default function Hero() {
             height={16}
           />
           LinkedIn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/projects"
-        >
-          <Image
-            aria-hidden
-            className="dark:invert"
-            src="/folder.svg"
-            alt="Projects"
-            width={16}
-            height={16}
-          />
-          项目
         </a>
       </AnimatedText>
     </section>

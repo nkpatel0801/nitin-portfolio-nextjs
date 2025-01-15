@@ -5,23 +5,59 @@ import Image from "next/image"
 import AnimatedText from "../common/AnimatedText"
 
 const technologies = {
-  // 需要用户自己添加技能，图标需要自己添加到public/skills目录下，格式为：{ name: '技能名称', icon: '/skills/技能图标.svg' }
   frontend: [
-    { name: '示例技能', icon: '/skills/example.svg' }, // 请替换为你的技能和对应图标
+    { name: 'React', icon: '/skills/react.svg' },
+    { name: 'Redux', icon: '/skills/redux.svg' },
+    { name: 'TypeScript', icon: '/skills/typescript.svg' },
+    { name: 'Material-UI', icon: '/skills/material-ui.svg' },
+    { name: 'Ant Design', icon: '/skills/antd.svg' },
   ],
   backend: [
-    { name: '示例技能1', icon: '/skills/example1.svg' }, // 请替换为你的技能和对应图标
-    { name: '示例技能2', icon: '/skills/example2.svg' } // 请替换为你的技能和对应图标
+    { name: 'Node.js', icon: '/skills/nodejs.svg' },
+    { name: 'Express.js', icon: '/skills/express.svg' },
+    { name: 'Socket.io', icon: '/skills/socketio.svg' },
+    { name: 'JWT', icon: '/skills/jwt.svg' },
+  ],
+  infrastructure: [
+    { name: 'MongoDB', icon: '/skills/mongodb.svg' },
+    { name: 'Redis', icon: '/skills/redis.svg' },
+    { name: 'Mongoose', icon: '/skills/mongoose.svg' },
+    { name: 'Netlify', icon: '/skills/netlify.svg' },
+    { name: 'Heroku', icon: '/skills/heroku.svg' },
+    { name: 'Vercel', icon: '/skills/vercel.svg' },
+  ],
+  datascience: [
+    { name: 'NumPy', icon: '/skills/numpy.svg' },
+    { name: 'Pandas', icon: '/skills/pandas.svg' },
+    { name: 'Scikit-learn', icon: '/skills/scikit-learn.svg' },
+    { name: 'Matplotlib', icon: '/skills/matplotlib.svg' },
+    { name: 'Jupyter', icon: '/skills/jupyter.svg' },
+  ],
+  tools: [
+    { name: 'Git', icon: '/skills/git.svg' },
+    { name: 'GitHub', icon: '/skills/github.svg' },
+    { name: 'Linux', icon: '/skills/linux.svg' },
+    { name: 'VS Code', icon: '/skills/vscode.svg' },
+    { name: 'PyCharm', icon: '/skills/pycharm.svg' },
+  ],
+  languages: [
+    { name: 'JavaScript', icon: '/skills/javascript.svg' },
+    { name: 'Python', icon: '/skills/python.svg' },
+    { name: 'C', icon: '/skills/c.svg' },
+    { name: 'C++', icon: '/skills/cpp.svg' },
+    { name: 'HTML5', icon: '/skills/html5.svg' },
+    { name: 'CSS3', icon: '/skills/css3.svg' },
+    { name: 'R', icon: '/skills/r.svg' },
   ]
 }
 
 const categories = {
-  frontend: '前端开发', // 可以根据需要修改分类名称
-  backend: '后端开发',
-  infrastructure: '数据库与部署',
-  datascience: '数据科学与机器学习',
-  tools: '系统编程与工具',
-  languages: '编程语言'
+  frontend: 'Frontend Development',
+  backend: 'Backend Development', 
+  infrastructure: 'Database & Deployment',
+  datascience: 'Data Science & Machine Learning',
+  tools: 'System Programming & Tools',
+  languages: 'Programming Languages'
 }
 
 export default function MySkills() {
@@ -35,7 +71,7 @@ export default function MySkills() {
           <h1 className="
             text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center
           ">
-            专业技能 {/* 可以修改标题 */}
+            Technical Skills
           </h1>
         </AnimatedText>
         

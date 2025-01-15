@@ -27,13 +27,14 @@ const experiences: Experience[] = [
     description: "Developed an interactive anatomy visualization tool with precise localization for 15+ organs, improving research accessibility and user engagement."
   },
   {
-    id: 1,
-    title: "职位名称",
-    company: "公司名称",
-    period: "2024.01 - Present",
-    logo: "/experience/company-logo.png",
-    skills: ["技能1", "技能2", "技能3"],
-    description: "职位描述"
+    id: 2,
+    title: "Full-Stack Developer Intern & Technical Lead",
+    company: "3CCA Church",
+    period: "Dec 2024 – Present",
+    logo: "/companyicon/3CCA.jpg",
+    skills: ["React", "Node.js", "MongoDB", "AWS"],
+    description: "Redesigned and redeveloped the 3CCA Church website, enhancing user experience and operational efficiency while optimizing website performance by 30%."
+  }
 ];
 
 export default function Experience() {
@@ -52,8 +53,8 @@ export default function Experience() {
         <GradientBackground 
           sectionId="experience"
           gradientColors={{
-            start: '#818CF8',
-            end: '#6366F1'
+            start: '#7C3AED',  // 浅紫罗兰
+            end: '#5B21B6'     // 深紫罗兰
           }}
         />
 
@@ -63,7 +64,7 @@ export default function Experience() {
           </h1>
         </AnimatedText>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10 max-w-6xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-0 max-w-6xl w-full">
           {experiences.map((experience) => (
             <div key={experience.id}>
               <AnimatedText>
@@ -95,10 +96,14 @@ export default function Experience() {
                       />
                     </div>
                     
-                    <div>
-                      <h2 className="text-2xl font-semibold">
+                    <div className="flex-1">
+                      <h3 className="
+                        text-base sm:text-lg md:text-xl  /* 移动端16px, sm:18px, md:20px */
+                        font-bold 
+                        mb-1
+                      ">
                         {experience.title}
-                      </h2>
+                      </h3>
                       
                       <p className="text-base text-gray-600 dark:text-gray-400">
                         {experience.company}

@@ -3,7 +3,6 @@
 import AnimatedText from '../common/AnimatedText'
 import ResearchModal from './ResearchModal'
 import { useState } from 'react'
-import Image from 'next/image'
 
 type Publication = {
   id: number
@@ -25,41 +24,41 @@ type Publication = {
 const publications: Publication[] = [
   {
     id: 1,
-    title: "论文标题",
-    authors: "作者名字",
-    year: "2024",
-    journal: "期刊名称",
+    title: "Cleaner Waters and Urbanization",
+    authors: "with Jeremy West",
+    year: "2023",
+    journal: "Journal of Environmental Economics and Management, 122: 102874",
     type: "publication",
-    pdf: "#",
-    ssrn: "#",
-    description: "论文简介",
-    overview: "论文详细介绍",
-    publishDate: "2024年1月",
-    chartImage: "/research/paper-chart.png"
+    pdf: "https://labs-laboratory.com/medicine/",
+    ssrn: "https://labs-laboratory.com/medicine/",
+    description: "中文介绍 (by E3M)",
+    overview: "这是论文的详细介绍...",
+    publishDate: "2023年12月",
+    chartImage: "/research/1.png"
   },
   {
     id: 2,
-    title: "另一篇论文标题",
-    authors: "作者名字",
-    year: "2023",
-    journal: "期刊名称",
+    title: "Donations make people happier: Evidence from the Wenchuan earthquake",
+    authors: "with Maoliang Ye",
+    year: "2017",
+    journal: "Social Indicators Research, 132(1): 517-536",
     type: "publication",
     ssrn: "#",
     citations: [
-      "引用示例"
+      "Helliwell, John F., Haifang Huang, and Shun Wang. \"The Social Foundations of World Happiness.\" World Happiness Report 2017: 8."
     ]
   },
   {
     id: 3,
-    title: "工作论文标题",
-    authors: "作者名字",
+    title: "Permission to Build: Climate Risk and Property Tax Revenue",
+    authors: "",
     year: "2024",
     type: "working",
     pdf: "#",
     bulletPoints: [
-      "论文要点1",
-      "论文要点2",
-      "论文要点3"
+      "First bullet point about the paper",
+      "Second bullet point about methodology", 
+      "Third bullet point about findings"
     ]
   }
 ]
@@ -145,6 +144,14 @@ export default function Research() {
                           <p className="opacity-70 text-xs sm:text-base">
                             {paper.description}
                           </p>
+                        )}
+
+                        {paper.bulletPoints && (
+                          <ul className="list-disc list-inside opacity-70 text-xs sm:text-base pl-1 space-y-1">
+                            {paper.bulletPoints.map((point, index) => (
+                              <li key={index}>{point}</li>
+                            ))}
+                          </ul>
                         )}
                       </div>
                       

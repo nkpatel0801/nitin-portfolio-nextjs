@@ -40,11 +40,11 @@ export default function GradientBackground({ sectionId, gradientColors }: Props)
         sx={{
           position: 'fixed',
           width: {
-            xs: '300px',
-            sm: '500px'
+            xs: '200px',
+            sm: '400px'
           },
           height: {
-            xs: '300px',
+            xs: '200px',
             sm: '500px'
           },
           borderRadius: '50%',
@@ -53,7 +53,7 @@ export default function GradientBackground({ sectionId, gradientColors }: Props)
             xs: 'blur(40px)',
             sm: 'blur(80px)'
           },
-          top: {
+          bottom: {
             xs: '-40px',
             sm: '-100px'
           },
@@ -63,7 +63,8 @@ export default function GradientBackground({ sectionId, gradientColors }: Props)
           },
           opacity: isVisible ? 0.3 : 0,
           transition: 'opacity 0.8s ease-in-out',
-          zIndex: 1,
+          zIndex: -1,
+          pointerEvents: 'none',
         }}
       />
       <Box
@@ -93,7 +94,8 @@ export default function GradientBackground({ sectionId, gradientColors }: Props)
           },
           opacity: isVisible ? 0.3 : 0,
           transition: 'opacity 0.8s ease-in-out',
-          zIndex: 1,
+          zIndex: -1,
+          pointerEvents: 'none',
         }}
       />
     </>

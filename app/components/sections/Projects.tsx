@@ -17,15 +17,32 @@ type Project = {
 }
 
 const projects: Project[] = [
-  // 需要用户自己添加项目，格式为：
   {
-    id: 1,
-    title: "项目名称",
-    description: "Project description",
-    period: "2024.01 - 2024.03",
-    image: "/projects/project-name/overview.png",
-    skills: ["React", "Node.js", "MongoDB"],
-    link: "项目链接"
+    id: 3,
+    title: "AnimeHub",
+    description: "A full-stack anime forum website featuring ratings, rankings, and user discussions with multi-language support.",
+    period: "2024.06 - 2024.11",
+    image: "/animehub/home.png",
+    skills: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+    link: "https://github.com/songzhiyuan98/animehub"
+  },
+  {
+    id: 4,
+    title: "Personal Portfolio Website",
+    description: "A personal portfolio website focusing on minimalist UI design, featuring reusable components and responsive layouts.",
+    period: "2024.10 - 2025.01",
+    image: "/personalwebsite/1.png",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    link: "https://github.com/songzhiyuan98/portfolio"
+  },
+  {
+    id: 5,
+    title: "Portfolio Website Template System",
+    description: "Developed a flexible portfolio website template system with different versions for job seekers and researchers, featuring onboarding guides, content management, and theme customization.",
+    period: "2025.01 - 2025.02", 
+    image: "/pw-temp/home.png",
+    skills: ["Next.js", "Tailwind CSS", "TypeScript"],
+    link: "https://portfolio-template.vercel.app"
   }
 ];
 
@@ -45,8 +62,8 @@ export default function Projects() {
         <GradientBackground 
           sectionId="projects"
           gradientColors={{
-            start: '#F472B6',
-            end: '#EC4899'
+            start: '#F43F5E',  // 浅玫红
+            end: '#BE123C'     // 深玫红
           }}
         />
 
@@ -56,7 +73,7 @@ export default function Projects() {
           </h1>
         </AnimatedText>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10 max-w-6xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-0 max-w-6xl w-full">
           {projects.map((project) => (
             <div key={project.id}>
               <AnimatedText>
@@ -77,7 +94,7 @@ export default function Projects() {
                     cursor-pointer
                   "
                 >
-                  <div className="relative w-full h-64 mb-4">
+                  <div className="relative w-full h-48 md:h-72 mb-4">
                     <Image
                       src={project.image}
                       alt={project.title}

@@ -12,27 +12,34 @@ type Course = {
   reviews?: string[]
 }
 
-// 示例课程数据
 const courses: Course[] = [
   {
     id: 1,
-    code: "课程代码",
-    name: "课程名称",
-    level: "课程等级",
-    professor: "教授姓名",
-    term: "学期"
+    code: "ECON 200",
+    name: "Microeconomic Analysis",
+    level: "Graduate",
+    professor: "Professor Dong Wei",
+    term: "2023 Fall"
   },
   {
     id: 2,
-    code: "ECON 170", 
-    name: "环境经济学",
-    level: "本科",
-    professor: "Jeremy West 教授",
-    term: "2025年冬季",
+    code: "ECON 170",
+    name: "Environmental Economics",
+    level: "Undergraduate",
+    professor: "Professor Jeremy West",
+    term: "2025 Winter",
     reviews: [
-      "学生评价示例1",
-      "学生评价示例2"
+      "I absolutely loved Qianping. He was the perfect TA. He was available whenever I was confused, and explained concepts more clearly than the professor did some time. I loved being able to learn from him.",
+      "I really liked how Qianping went over the basic framework of the unit we were learning each week. It served as a great reference point and helped me in completeing the problem sets and exams a lot."
     ]
+  },
+  {
+    id: 3,
+    code: "ECON 100A",
+    name: "Intermediate Microeconomics",
+    level: "Undergraduate",
+    professor: "Professor Natalia Lazzati",
+    term: "2020 Fall"
   }
 ]
 
@@ -47,10 +54,10 @@ export default function TeachingExperience() {
         <AnimatedText>
           <div className="flex flex-col items-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold text-center">
-              教学经历
+              Teaching Experience
             </h1>
             <span className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
-              @ 你的学校
+              @ UC Santa Cruz
             </span>
           </div>
         </AnimatedText>
@@ -70,7 +77,7 @@ export default function TeachingExperience() {
 
                 <div className="space-y-1">
                   <p className="text-base sm:text-lg">
-                    助教 - {course.professor}
+                    Teaching Assistant to {course.professor}
                   </p>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                     {course.term}
@@ -80,7 +87,7 @@ export default function TeachingExperience() {
                 {course.reviews && course.reviews.length > 0 && (
                   <div className="mt-6 space-y-4">
                     <h3 className="text-lg font-medium">
-                      学生评价精选:
+                      Selected Student Experience:
                     </h3>
                     {course.reviews.map((review, index) => (
                       <blockquote 
