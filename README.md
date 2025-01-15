@@ -114,18 +114,6 @@ vercel
 
 ---
 
-### **Screenshots**
-
-#### Job Seeker Version
-
-![Job Seeker Home](https://path-to-your-image/job-seeker.png)
-
-#### Researcher Version
-
-![Researcher Home](https://path-to-your-image/researcher.png)
-
----
-
 ### **Contributing**
 
 Feel free to contribute to this project by submitting pull requests. Suggestions and feedback are always welcome!

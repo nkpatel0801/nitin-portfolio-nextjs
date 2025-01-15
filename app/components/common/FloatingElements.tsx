@@ -3,20 +3,27 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useState } from "react"
 
-// 将项目分类并定义样式
+// This is an optional background effect that displays floating elements
+// You can customize it by modifying the items array below
+// Each item has two properties:
+// - text: The text to display
+// - type: The category of the item ('tech', 'project', or 'interest')
+
 const items: { text: string, type: 'tech' | 'project' | 'interest' }[] = [
-  // 技术关键词
+  // Technical Skills - Add or modify your technical expertise
   { text: "React", type: "tech" },
   { text: "TypeScript", type: "tech" },
   { text: "Python", type: "tech" },
   { text: "Node.js", type: "tech" },
   { text: "Git", type: "tech" },
-  // 项目关键词
+  
+  // Projects - List your key projects or work experience
   { text: "Portfolio", type: "project" },
   { text: "Web Development", type: "project" },
   { text: "Animehub", type: "project" },
   { text: "SDE", type: "project" },
-  // 兴趣关键词
+  
+  // Interests/Background - Share your interests and background
   { text: "ML/AI", type: "interest" },
   { text: "Full Stack", type: "interest" },
   { text: "Computer Science", type: "interest" },

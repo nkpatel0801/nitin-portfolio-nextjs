@@ -14,10 +14,10 @@ export default function About() {
           <AnimatedText>
             <div className="space-y-4">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Hi, I'm Zhiyuan Song, a junior Computer Science major at UCSC with a strong passion for software development. My goal is to become a Software Development Engineer, where I can contribute to building impactful and scalable solutions.
+                Here, you can introduce your basic background information. Include your name, major, education and other basic information. This is an excellent place to showcase your personal characteristics.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I specialize in full-stack development with hands-on experience in React, Node.js, and MongoDB. I've designed and developed multiple user-centric web applications that prioritize scalability, performance, and intuitive user experiences. My projects reflect my problem-solving skills and attention to detail in creating seamless digital solutions.
+                You can describe your professional skills and experience in detail. Highlight your tech stack, project experience, and achievements in relevant fields. This information will help visitors better understand your professional capabilities.
               </p>
             </div>
           </AnimatedText>
@@ -26,7 +26,7 @@ export default function About() {
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Personal Interests</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-              Outside of coding, I enjoy exploring anime, playing table tennis, mixing creative cocktails, and diving into the latest advancements in web technologies.
+                In this section, you can share your personal interests and hobbies. This content can make your profile more vibrant and showcase your unique personality traits.
               </p>
             </div>
           </AnimatedText>
@@ -35,7 +35,7 @@ export default function About() {
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Career Goals</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I'm actively seeking internship opportunities as a Software Development Engineer to further hone my skills and gain hands-on experience in the industry. I am eager to bring my technical expertise, problem-solving mindset, and passion for learning to a dynamic team.
+                Here you can describe your career development plans and goals. Clearly express the types of opportunities you are looking for and the goals you hope to achieve in your future career.
               </p>
             </div>
           </AnimatedText>
@@ -43,4 +43,4 @@ export default function About() {
       </div>
     </section>
   )
-} 
+}

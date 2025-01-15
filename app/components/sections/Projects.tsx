@@ -6,6 +6,15 @@ import GradientBackground from '../common/GradientBackground'
 import ExperienceModal from './Motal'
 import { useState } from 'react'
 
+// Define project data type
+// Each project must include:
+// - id: Unique identifier
+// - title: Project name
+// - description: Project description
+// - period: Development period
+// - image: Project screenshot path (stored in public/project/ directory)
+// - skills: Tech stack used
+// - link: Project link (GitHub/Demo)
 type Project = {
   id: number
   title: string
@@ -16,33 +25,30 @@ type Project = {
   link: string
 }
 
+// Example project data
+// Usage instructions:
+// 1. Copy template below and modify content as needed
+// 2. Place project screenshots in public/project/ directory
+// 3. Sort projects in reverse chronological order
+// 4. Project descriptions should highlight core features and technical highlights
 const projects: Project[] = [
   {
-    id: 3,
-    title: "AnimeHub",
-    description: "A full-stack anime forum website featuring ratings, rankings, and user discussions with multi-language support.",
-    period: "2024.06 - 2024.11",
-    image: "/animehub/home.png",
-    skills: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-    link: "https://github.com/songzhiyuan98/animehub"
+    id: 1,
+    title: "Example Project 1",
+    description: "This is a sample project description. Detail the main features, technical architecture, your responsibilities and project highlights. Use concise language to emphasize key points.",
+    period: "2024.01 - 2024.03",
+    image: "/example1/screenshot.png", // Screenshot path
+    skills: ["React", "TypeScript", "Node.js"], // Tech stack
+    link: "https://github.com/username/project1"
   },
   {
-    id: 4,
-    title: "Personal Portfolio Website",
-    description: "A personal portfolio website focusing on minimalist UI design, featuring reusable components and responsive layouts.",
-    period: "2024.10 - 2025.01",
-    image: "/personalwebsite/1.png",
-    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "https://github.com/songzhiyuan98/portfolio"
-  },
-  {
-    id: 5,
-    title: "Portfolio Website Template System",
-    description: "Developed a flexible portfolio website template system with different versions for job seekers and researchers, featuring onboarding guides, content management, and theme customization.",
-    period: "2025.01 - 2025.02", 
-    image: "/pw-temp/home.png",
-    skills: ["Next.js", "Tailwind CSS", "TypeScript"],
-    link: "https://portfolio-template.vercel.app"
+    id: 2, 
+    title: "Example Project 2",
+    description: "Another example project. Description can include: 1) Problems solved 2) Technical solutions used 3) Results achieved 4) What you learned",
+    period: "2023.10 - 2023.12",
+    image: "/example2/demo.png",
+    skills: ["Vue.js", "Python", "MongoDB"],
+    link: "https://github.com/username/project2"
   }
 ];
 
@@ -62,8 +68,8 @@ export default function Projects() {
         <GradientBackground 
           sectionId="projects"
           gradientColors={{
-            start: '#F43F5E',  // 浅玫红
-            end: '#BE123C'     // 深玫红
+            start: '#F43F5E',  // Light rose
+            end: '#BE123C'     // Deep rose
           }}
         />
 
@@ -143,7 +149,7 @@ export default function Projects() {
       <ExperienceModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        experienceId={selectedProject || 0}
+        experienceId={selectedProject ?? 1}
       />
     </section>
   )

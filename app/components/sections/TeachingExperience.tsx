@@ -2,6 +2,15 @@
 
 import AnimatedText from '../common/AnimatedText'
 
+// Define course data type
+// Each course entry must include:
+// - id: Unique identifier
+// - code: Course code (e.g. "ECON 200") 
+// - name: Course name
+// - level: Course level ("Graduate" or "Undergraduate")
+// - professor: Professor name
+// - term: Academic term (e.g. "2023 Fall")
+// - reviews: Optional array of student reviews
 type Course = {
   id: number
   code: string
@@ -12,11 +21,17 @@ type Course = {
   reviews?: string[]
 }
 
+// Example course data
+// Usage instructions:
+// 1. Copy template below and modify content as needed
+// 2. Required fields for each course: id, code, name, level, professor, term
+// 3. Reviews field is optional for student feedback
+// 4. Sort courses in reverse chronological order
 const courses: Course[] = [
   {
     id: 1,
     code: "ECON 200",
-    name: "Microeconomic Analysis",
+    name: "Microeconomic Analysis", 
     level: "Graduate",
     professor: "Professor Dong Wei",
     term: "2023 Fall"
@@ -25,7 +40,7 @@ const courses: Course[] = [
     id: 2,
     code: "ECON 170",
     name: "Environmental Economics",
-    level: "Undergraduate",
+    level: "Undergraduate", 
     professor: "Professor Jeremy West",
     term: "2025 Winter",
     reviews: [
@@ -38,7 +53,7 @@ const courses: Course[] = [
     code: "ECON 100A",
     name: "Intermediate Microeconomics",
     level: "Undergraduate",
-    professor: "Professor Natalia Lazzati",
+    professor: "Professor Natalia Lazzati", 
     term: "2020 Fall"
   }
 ]

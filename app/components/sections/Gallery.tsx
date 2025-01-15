@@ -5,6 +5,13 @@ import Image from 'next/image'
 import { Typography, Container, Box, Card, CardContent, Grid } from '@mui/material'
 import GradientBackground from '../common/GradientBackground'
 
+// Define photo data type
+// Each photo must include:
+// - id: Unique identifier
+// - image: Image path (stored in public/gallery/ directory)
+// - date: Photo date
+// - location: Photo location
+// - description: Photo description
 type Photo = {
   id: number
   image: string
@@ -13,38 +20,16 @@ type Photo = {
   description: string
 }
 
+// Example photo data
+// To add more photos:
+// 1. Place your photo files in public/gallery/ directory
+// 2. Copy the template below and add new photo entries
+// 3. Update the image path, date, location and description
+// 4. Recommended to sort photos in reverse chronological order
 const photos: Photo[] = [
   {
     id: 1,
-    image: "/gallery/1.jpg",
-    date: "2023.12",
-    location: "Santa Cruz Beach Boardwalk",
-    description: "With UCSC friends"
-  },
-  {
-    id: 2,
-    image: "/gallery/2.jpg",
-    date: "2023.12",
-    location: "Santa Cruz Beach Boardwalk",
-    description: "With UCSC friends"
-  },
-  {
-    id: 3,
-    image: "/gallery/3.jpg",
-    date: "2023.12",
-    location: "Santa Cruz Beach Boardwalk",
-    description: "With UCSC friends"
-  },
-  {
-    id: 4,
-    image: "/gallery/4.jpg",
-    date: "2023.12",
-    location: "Santa Cruz Beach Boardwalk",
-    description: "With UCSC friends"
-  },
-  {
-    id: 5,
-    image: "/gallery/5.jpg",
+    image: "/gallery/example.jpg",
     date: "2023.12",
     location: "Santa Cruz Beach Boardwalk",
     description: "With UCSC friends"
@@ -68,8 +53,8 @@ export default function Gallery() {
         <GradientBackground 
           sectionId="gallery"
           gradientColors={{
-            start: '#60A5FA',  // 浅蓝色
-            end: '#3B82F6'     // 深蓝色
+            start: '#60A5FA',  // Light blue
+            end: '#3B82F6'     // Deep blue
           }}
         />
 
@@ -125,9 +110,9 @@ export default function Gallery() {
                       fontWeight: 500,
                       mb: { xs: 0.5, sm: 0.75, md: 1 },
                       fontSize: { 
-                        xs: '0.875rem',  // 14px
-                        sm: '1rem',      // 16px
-                        md: '1.125rem'   // 18px
+                        xs: '0.875rem',
+                        sm: '1rem',
+                        md: '1.125rem'
                       }
                     }}>
                       {photo.location}
@@ -135,9 +120,9 @@ export default function Gallery() {
                     <Typography variant="body2" sx={{ 
                       opacity: 0.7,
                       fontSize: { 
-                        xs: '0.75rem',   // 12px
-                        sm: '0.875rem',  // 14px
-                        md: '1rem'       // 16px
+                        xs: '0.75rem',
+                        sm: '0.875rem',
+                        md: '1rem'
                       }
                     }}>
                       {photo.date}
@@ -146,9 +131,9 @@ export default function Gallery() {
                       opacity: 0.7,
                       mt: { xs: 0.5, sm: 0.75, md: 1 },
                       fontSize: { 
-                        xs: '0.75rem',   // 12px
-                        sm: '0.875rem',  // 14px
-                        md: '1rem'       // 16px
+                        xs: '0.75rem',
+                        sm: '0.875rem',
+                        md: '1rem'
                       }
                     }}>
                       {photo.description}

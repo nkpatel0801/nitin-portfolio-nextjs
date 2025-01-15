@@ -3,13 +3,27 @@
 import { useState, useEffect, useRef } from "react"
 import React from 'react'
 
+// Navigation bar configuration
+// To modify navigation bar order and content:
+// 1. Each item contains two properties:
+//    - name: Display name
+//    - href: Corresponding section id (must start with #)
+// 2. To change order, simply adjust item positions in array
+// 3. When adding new items ensure:
+//    - href matches section id in page
+//    - maintain consistent format
+// 4. To remove items, delete directly from array
+// Example: Moving Projects before Experience:
+// { name: "Projects", href: "#projects"},
+// { name: "Experience", href: "#experience"},
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills"},
   { name: "Education", href: "#education" },
-  { name: "Projects", href: "#projects"},
   { name: "Experience", href: "#experience"},
+  { name: "Projects", href: "#projects"},
+  { name: "Gallery", href: "#gallery"},
 ]
 
 export default function Navbar() {

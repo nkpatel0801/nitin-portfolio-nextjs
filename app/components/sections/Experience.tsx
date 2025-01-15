@@ -6,34 +6,42 @@ import GradientBackground from '../common/GradientBackground'
 import ExperienceModal from './Motal'
 import { useState } from 'react'
 
+// Define experience entry type
 type Experience = {
-  id: number
-  title: string
-  company: string
-  period: string
-  logo: string
-  skills: string[]
-  description: string
+  id: number          // Unique identifier
+  title: string       // Position title
+  company: string     // Company name
+  period: string      // Work period
+  logo: string        // Company logo path (stored in public/companyicon/)
+  skills: string[]    // Skills list (corresponding icons stored in public/skills/, filename in lowercase)
+  description: string // Work description
 }
 
+// Example data
+// Usage instructions:
+// 1. Copy template below and modify content as needed
+// 2. Place logo images in public/companyicon/ directory
+// 3. Skills icons will be automatically fetched from public/skills/ directory
+//    Example: "JavaScript" -> public/skills/javascript.png
+// 4. Recommended to sort experience entries in reverse chronological order
 const experiences: Experience[] = [
   {
     id: 1,
-    title: "Web Developer Intern",
-    company: "Labs Laboratory | Columbia University",
-    period: "Dec 2024 – Present",
-    logo: "/companyicon/labs.png",
-    skills: ["JavaScript", "SVG", "CSS3", "Git"],
-    description: "Developed an interactive anatomy visualization tool with precise localization for 15+ organs, improving research accessibility and user engagement."
+    title: "Example Position 1",
+    company: "Example Company 1",
+    period: "January 2024 - Present",
+    logo: "/companyicon/company1.png", // Logo image path
+    skills: ["React", "TypeScript", "Node.js"], // Skills list
+    description: "This is a sample work description detailing your main responsibilities and achievements in this role."
   },
   {
-    id: 2,
-    title: "Full-Stack Developer Intern & Technical Lead",
-    company: "3CCA Church",
-    period: "Dec 2024 – Present",
-    logo: "/companyicon/3CCA.jpg",
-    skills: ["React", "Node.js", "MongoDB", "AWS"],
-    description: "Redesigned and redeveloped the 3CCA Church website, enhancing user experience and operational efficiency while optimizing website performance by 30%."
+    id: 2, 
+    title: "Example Position 2",
+    company: "Example Company 2",
+    period: "June 2023 - December 2023",
+    logo: "/companyicon/company2.png",
+    skills: ["Python", "Django", "PostgreSQL"],
+    description: "This is another sample work description. Consider including specific numbers and achievements."
   }
 ];
 
@@ -50,11 +58,18 @@ export default function Experience() {
         relative
         overflow-hidden
       ">
+        {/* Optional gradient background component */}
+        {/* You can adjust background colors by modifying gradientColors */}
+        {/* Examples:
+          Blue theme: start:'#3B82F6' end:'#1E40AF'
+          Green theme: start:'#10B981' end:'#047857'
+          Pink theme: start:'#EC4899' end:'#BE185D'
+        */}
         <GradientBackground 
           sectionId="experience"
           gradientColors={{
-            start: '#7C3AED',  // 浅紫罗兰
-            end: '#5B21B6'     // 深紫罗兰
+            start: '#7C3AED',  // Light violet
+            end: '#5B21B6'     // Deep violet
           }}
         />
 
@@ -98,7 +113,7 @@ export default function Experience() {
                     
                     <div className="flex-1">
                       <h3 className="
-                        text-base sm:text-lg md:text-xl  /* 移动端16px, sm:18px, md:20px */
+                        text-base sm:text-lg md:text-xl  /* Mobile: 16px, sm:18px, md:20px */
                         font-bold 
                         mb-1
                       ">
@@ -147,7 +162,7 @@ export default function Experience() {
       <ExperienceModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        experienceId={selectedExperience || 0}
+        experienceId={selectedExperience ?? 1}
       />
     </section>
   )

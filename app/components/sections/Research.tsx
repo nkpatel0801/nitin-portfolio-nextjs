@@ -4,25 +4,33 @@ import AnimatedText from '../common/AnimatedText'
 import ResearchModal from './ResearchModal'
 import { useState } from 'react'
 
+// Type definition for research paper entries
 type Publication = {
-  id: number
-  title: string
-  authors: string
-  year: string
-  journal?: string
-  type: 'publication' | 'working'
-  pdf?: string
-  ssrn?: string
-  description?: string
-  citations?: string[]
-  bulletPoints?: string[]
-  overview?: string
-  publishDate?: string
-  chartImage?: string
+  id: number                  // Unique identifier for the paper
+  title: string              // Paper title
+  authors: string            // Author list
+  year: string              // Publication year
+  journal?: string          // Journal name (optional)
+  type: 'publication' | 'working'  // Paper type: published/working
+  pdf?: string             // PDF link (optional)
+  ssrn?: string           // SSRN link (optional)
+  description?: string    // Brief description (optional)
+  citations?: string[]    // Citation list (optional)
+  bulletPoints?: string[] // Key points list (optional)
+  overview?: string       // Detailed overview (optional)
+  publishDate?: string    // Publication date (optional)
+  chartImage?: string     // Chart image path (optional)
 }
 
+// Example research paper data
+// Usage Instructions:
+// 1. Copy template below and modify content as needed
+// 2. Required fields for each paper: id, title, year, type
+// 3. Other fields are optional based on paper details
+// 4. Papers are automatically displayed by type
 const publications: Publication[] = [
   {
+    // Published paper example
     id: 1,
     title: "Cleaner Waters and Urbanization",
     authors: "with Jeremy West",
@@ -31,16 +39,17 @@ const publications: Publication[] = [
     type: "publication",
     pdf: "https://labs-laboratory.com/medicine/",
     ssrn: "https://labs-laboratory.com/medicine/",
-    description: "中文介绍 (by E3M)",
-    overview: "这是论文的详细介绍...",
-    publishDate: "2023年12月",
+    description: "English description (by E3M)",
+    overview: "This is a detailed overview of the paper...",
+    publishDate: "December 2023",
     chartImage: "/research/1.png"
   },
   {
+    // Published paper with citations example
     id: 2,
     title: "Donations make people happier: Evidence from the Wenchuan earthquake",
     authors: "with Maoliang Ye",
-    year: "2017",
+    year: "2017", 
     journal: "Social Indicators Research, 132(1): 517-536",
     type: "publication",
     ssrn: "#",
@@ -49,6 +58,7 @@ const publications: Publication[] = [
     ]
   },
   {
+    // Working paper example
     id: 3,
     title: "Permission to Build: Climate Risk and Property Tax Revenue",
     authors: "",
@@ -179,7 +189,7 @@ export default function Research() {
                           group-hover:translate-x-0.5
                           transition-transform duration-300
                         ">
-                          查看详情
+                          View Details
                         </span>
                         <svg 
                           width="16" 

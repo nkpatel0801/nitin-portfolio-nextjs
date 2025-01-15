@@ -14,9 +14,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// TODO: Please update the title and description with your personal information
 export const metadata: Metadata = {
-  title: "Zhiyuan Song | Portfolio",
-  description: "Full Stack Developer | UCSC Computer Science Student",
+  title: "Portfolio Template",
+  description: "A modern portfolio template for developers and designers",
 };
 
 export default function RootLayout({

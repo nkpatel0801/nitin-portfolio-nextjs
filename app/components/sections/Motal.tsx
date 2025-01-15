@@ -3,11 +3,8 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { 
-  labsExperience,
-  churchExperience,
-  animeHubExperience,
-  portfolioExperience,
-  portfolioTemplateExperience 
+  getProjectById,
+  PROJECT_DATA
 } from '@/app/data/project'
 
 const preloadImages = (features: { image: string | string[] }[]) => {
@@ -37,11 +34,7 @@ export default function ExperienceModal({
 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  const experience = experienceId === 1 ? labsExperience : 
-                    experienceId === 2 ? churchExperience : 
-                    experienceId === 3 ? animeHubExperience : 
-                    experienceId === 4 ? portfolioExperience : 
-                    portfolioTemplateExperience;
+  const experience = getProjectById(experienceId) || Object.values(PROJECT_DATA)[0];
 
   useEffect(() => {
     if (open) {

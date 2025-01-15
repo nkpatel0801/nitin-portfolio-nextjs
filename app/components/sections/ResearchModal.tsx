@@ -3,19 +3,35 @@
 import Image from 'next/image'
 import { useEffect } from 'react'
 
+// Define Props type for data passed from Research component
 type Props = {
+  // paper object contains paper details
   paper: {
-    title: string
-    overview?: string
-    publishDate?: string
-    chartImage?: string
-    pdf?: string
-    ssrn?: string
+    title: string              // Paper title (required)
+    overview?: string          // Paper overview (optional)
+    publishDate?: string       // Publication date (optional)
+    chartImage?: string        // Chart image path (optional)
+    pdf?: string              // PDF link (optional)
+    ssrn?: string             // SSRN link (optional)
   }
-  onClose: () => void
+  onClose: () => void         // Callback function to close modal
 }
 
+// Usage example:
+// <ResearchModal 
+//   paper={{
+//     title: "Paper Title",
+//     overview: "Paper overview...",
+//     publishDate: "January 2024",
+//     chartImage: "/images/chart.png",
+//     pdf: "https://example.com/paper.pdf",
+//     ssrn: "https://ssrn.com/paper"
+//   }}
+//   onClose={() => setModalOpen(false)}
+// />
+
 export default function ResearchModal({ paper, onClose }: Props) {
+  // Disable page scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => {
@@ -53,11 +69,13 @@ export default function ResearchModal({ paper, onClose }: Props) {
       >
         <div className="space-y-8">
           <div className="space-y-6">
+            {/* Title and link buttons section */}
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                 {paper.title}
               </h1>
               <div className="flex items-center gap-3">
+                {/* PDF download button - only shown if PDF link provided */}
                 {paper.pdf && (
                   <a
                     href={paper.pdf}
@@ -98,6 +116,7 @@ export default function ResearchModal({ paper, onClose }: Props) {
                     </span>
                   </a>
                 )}
+                {/* SSRN link button - only shown if SSRN link provided */}
                 {paper.ssrn && (
                   <a
                     href={paper.ssrn}
@@ -137,12 +156,14 @@ export default function ResearchModal({ paper, onClose }: Props) {
               </div>
             </div>
             
+            {/* Publication date - only shown if publishDate provided */}
             {paper.publishDate && (
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                发布于 {paper.publishDate}
+                Published on {paper.publishDate}
               </p>
             )}
 
+            {/* Paper overview - only shown if overview provided */}
             {paper.overview && (
               <p className="
                 text-base sm:text-lg 
@@ -156,6 +177,7 @@ export default function ResearchModal({ paper, onClose }: Props) {
             )}
           </div>
 
+          {/* Chart image - only shown if chartImage provided */}
           {paper.chartImage && (
             <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
               <Image
@@ -170,4 +192,4 @@ export default function ResearchModal({ paper, onClose }: Props) {
       </div>
     </div>
   )
-} 
+}
