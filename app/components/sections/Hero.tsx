@@ -41,7 +41,7 @@ export default function Hero() {
       transition-colors flex items-center justify-center 
       bg-[#4CAF50] hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
       h-12 px-5 text-base min-w-[160px] sm:min-w-fit"
-            href="https://github.com/your-username"
+            href="https://github.com/baghel-nitin"
             target="_blank"
             rel="noopener noreferrer"
           >
