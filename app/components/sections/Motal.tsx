@@ -383,7 +383,6 @@ export default function ExperienceModal({
                             width={32}
                             height={32}
                             className="
-                              dark:invert          
                               sm:w-[40px] sm:h-[40px]
                             "
                           />

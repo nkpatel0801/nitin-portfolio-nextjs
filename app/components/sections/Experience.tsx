@@ -27,21 +27,36 @@ type Experience = {
 const experiences: Experience[] = [
   {
     id: 1,
-    title: "Example Position 1",
-    company: "Example Company 1",
-    period: "January 2024 - Present",
-    logo: "/companyicon/company1.png", // Logo image path
-    skills: ["React", "TypeScript", "Node.js"], // Skills list
-    description: "This is a sample work description detailing your main responsibilities and achievements in this role."
+    title: "React.js & React Native Developer",
+    company: "Nagarro",
+    period: "December 2023 – Present",
+    logo: "/companyicon/nagarro.png",
+    skills: ["React", "React Native", "Next.js", "Firebase", "Jest", "Google Maps API", "SSO", "Push Notifications"],
+    description: `Built secure mobile/web apps for Riyad Bank (Carpool), Mashreq Bank (Banking Platform), and Maruti Suzuki (Mobility App). 
+Integrated SSO login, live tracking, background sync, and biometric authentication. 
+Achieved 92% Lighthouse score and 90%+ unit test coverage with Jest for real-time data integrity and accessibility.`
   },
   {
-    id: 2, 
-    title: "Example Position 2",
-    company: "Example Company 2",
-    period: "June 2023 - December 2023",
-    logo: "/companyicon/company2.png",
-    skills: ["Python", "Django", "PostgreSQL"],
-    description: "This is another sample work description. Consider including specific numbers and achievements."
+    id: 2,
+    title: "React.js Developer & Team Lead",
+    company: "Encora Digital LLC",
+    period: "August 2022 – December 2023",
+    logo: "/companyicon/encora.png",
+    skills: ["React", "React Native", "Redux", "Firebase", "OpenAI API", "CI/CD", "Next.js"],
+    description: `Led development of CHC Healthcare Dashboard, CVS NRT PWA, and Agri Allies Farmer App.
+Enabled offline storage, multilingual AI chatbot, push notifications, and Git-based workflows.
+Boosted user engagement, automated workflows, and improved therapy completion rates with PWA rollout.`
+  },
+  {
+    id: 3,
+    title: "React.js Developer & Scrum Master",
+    company: "ATMECS Technologies",
+    period: "January 2019 – August 2022",
+    logo: "/companyicon/atmecs.jpg",
+    skills: ["React", "React Native", "Azure App Center", "REST APIs", "Google AdMob"],
+    description: `Delivered OTT Platform (The Fan Lounge) and UK Police Control Room System.
+Led a 9-member team across SDLC, deployed to app stores, and integrated analytics, ads, and real-time UIs.
+Improved emergency response time (<500ms) and achieved 15% revenue growth through AdMob monetization.`
   }
 ];
 

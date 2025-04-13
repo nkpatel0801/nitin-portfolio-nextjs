@@ -12,32 +12,65 @@ import AnimatedText from "../common/AnimatedText"
 // - name: Skill name
 // - icon: Icon path (SVG format, stored in public/skills/ directory)
 const technologies = {
-  // Frontend development skills examples
   frontend: [
+    // Most used by experienced devs
     { name: 'React', icon: '/skills/react.svg' },
-    { name: 'Vue', icon: '/skills/vue.svg' },     // Add your familiar frontend frameworks
+    { name: 'Next.js', icon: '/skills/nextjs1.svg' },
+    { name: 'React Native', icon: '/skills/reactnative.svg' },
     { name: 'TypeScript', icon: '/skills/typescript.svg' },
+    { name: 'Redux', icon: '/skills/redux.svg' },
+    { name: 'Tailwind CSS', icon: '/skills/tailwindcss.svg' },
+    { name: 'Styled Components', icon: '/skills/styledcomponents.svg' },
+    { name: 'Material UI', icon: '/skills/material-ui.svg' },
+    { name: 'Ant Design', icon: '/skills/ant-design.svg' },
+
+    // API / Real-time / Cloud integrations
+    { name: 'GraphQL', icon: '/skills/GraphQL.svg' },
+    { name: 'Apollo Client', icon: '/skills/apollo.svg' },
+    { name: 'Socket.io', icon: '/skills/socketio.svg' },
+    { name: 'Firebase', icon: '/skills/Firebase.svg' },
+    { name: 'AWS', icon: '/skills/aws.svg' },
+
+    // Testing / Performance / Advanced Tools
+    { name: 'Jest', icon: '/skills/jest.svg' },
+    { name: 'Progressive Web Apps', icon: '/skills/pwa-icon.svg' },
+    { name: 'Webpack', icon: '/skills/Webpack.svg' },
+    { name: 'Vite.js', icon: '/skills/Vite.js.svg' },
+
+    // Utilities & Dev Workflow
+    { name: 'Figma', icon: '/skills/Figma.svg' },
+    { name: 'Github Actions', icon: '/skills/Github Actions.svg' },
+    { name: 'Azure DevOps', icon: '/skills/Azure.svg' },
+    { name: 'SonarQube', icon: '/skills/SonarQube.svg' },
+    { name: 'Jira', icon: '/skills/Jira.svg' },
+    { name: 'Yarn', icon: '/skills/Yarn.svg' },
+    { name: 'NPM', icon: '/skills/npm.svg' },
+
+    // Basics / Less frequently used
+    { name: 'JavaScript', icon: '/skills/javascript.svg' },
+    { name: 'HTML5', icon: '/skills/html5.svg' },
+    { name: 'CSS3', icon: '/skills/css3.svg' },
+    { name: 'Sass', icon: '/skills/sass.svg' },
+    { name: 'jQuery', icon: '/skills/jQuery.svg' },
   ],
-  
-  // Backend development skills examples
+
   backend: [
     { name: 'Node.js', icon: '/skills/nodejs.svg' },
-    { name: 'Python', icon: '/skills/python.svg' }, // Add your familiar backend languages
-    { name: 'Java', icon: '/skills/java.svg' },
+    { name: 'Python', icon: '/skills/python.svg' },
   ],
 
-  // Database and deployment examples
   infrastructure: [
-    { name: 'MySQL', icon: '/skills/mysql.svg' },  // Add databases you've used
     { name: 'MongoDB', icon: '/skills/mongodb.svg' },
-    { name: 'Docker', icon: '/skills/docker.svg' }, // Add deployment tools you're familiar with
+    { name: 'Netlify', icon: '/skills/netlify.svg' },
+    { name: 'Vercel', icon: '/skills/vercel.svg' },
+    { name: 'Heroku', icon: '/skills/heroku.svg' },
   ],
 
-  // Development tools examples
   tools: [
     { name: 'Git', icon: '/skills/git.svg' },
     { name: 'VS Code', icon: '/skills/vscode.svg' },
-    { name: 'Postman', icon: '/skills/postman.svg' }, // Add your commonly used development tools
+    { name: 'Postman', icon: '/skills/Postman.svg' },
+    { name: 'Android Studio', icon: '/skills/androidstudio.svg' },
   ]
 }
 
@@ -115,10 +148,10 @@ export default function MySkills() {
                           alt={tech.name}
                           width={48}
                           height={48}
-                          className="
-                            dark:invert          
-                            sm:w-[56px] sm:h-[56px] /* icon size 56px on sm(640px) and above */
-                          "
+                          className={`
+                            ${['AWS', 'Socket.io', 'Vercel', 'Progressive Web Apps'].includes(tech.name) ? 'dark:invert' : ''}
+                            sm:w-[56px] sm:h-[56px]
+                          `}
                         />
                       </div>
                       <span className="

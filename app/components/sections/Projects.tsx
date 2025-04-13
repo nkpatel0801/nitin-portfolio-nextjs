@@ -34,21 +34,75 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Example Project 1",
-    description: "This is a sample project description. Detail the main features, technical architecture, your responsibilities and project highlights. Use concise language to emphasize key points.",
-    period: "2024.01 - 2024.03",
-    image: "/example1/screenshot.png", // Screenshot path
-    skills: ["React", "TypeScript", "Node.js"], // Tech stack
-    link: "https://github.com/username/project1"
+    title: "Riyad Bank – Carpool App",
+    description: "A secure ride-sharing app built for bank employees with SSO login, real-time ride matching, route optimization (Google Maps API), and periodic background sync for updated ride statuses.",
+    period: "2023.12 - Present",
+    image: "/companyicon/riyad-home.png",
+    skills: ["React Native", "SSO", "Google Maps API", "Firebase"],
+    link: "https://riyadbank.com"
   },
   {
-    id: 2, 
-    title: "Example Project 2",
-    description: "Another example project. Description can include: 1) Problems solved 2) Technical solutions used 3) Results achieved 4) What you learned",
-    period: "2023.10 - 2023.12",
-    image: "/example2/demo.png",
-    skills: ["Vue.js", "Python", "MongoDB"],
-    link: "https://github.com/username/project2"
+    id: 2,
+    title: "Mashreq Bank – Web & Mobile Banking Platform",
+    description: "High-performance digital banking platform with biometric login, session management, real-time alerts, and optimized architecture achieving 92% Lighthouse performance.",
+    period: "2023.12 - Present",
+    image: "/companyicon/mashreq-home.png",
+    skills: ["React", "React Native", "Firebase", "Redux"],
+    link: "https://mashreqbank.com"
+  },
+  {
+    id: 3,
+    title: "Maruti Suzuki – Dealer Mobility App",
+    description: "Mobile app for Maruti dealers with features like service booking, digital docs, and roadside assistance. Integrated REST APIs, real-time tracking, and 90%+ test coverage.",
+    period: "2023.12 - Present",
+    image: "/companyicon/maruti-home.png",
+    skills: ["React Native", "Firebase", "REST APIs", "Jest"],
+    link: "https://marutisuzuki.com"
+  },
+  {
+    id: 4,
+    title: "Change Healthcare – Healthcare Management System",
+    description: "Modernized a legacy healthcare system using React and Next.js, with dashboards for 10K+ users, real-time updates, CI/CD, and reduced staff workload.",
+    period: "2022.08 - 2023.12",
+    image: "/companyicon/chc1.jpg",
+    skills: ["React", "Next.js", "Redux", "CI/CD"],
+    link: "https://www.changehealthcare.com"
+  },
+  {
+    id: 5,
+    title: "NRT – Nicotine Replacement Therapy (CVS Pharmacy App – PWA)",
+    description: "Progressive Web App for smoking cessation with milestone tracking, reminders, offline access, and increased therapy completion rates.",
+    period: "2022.08 - 2023.12",
+    image: "/companyicon/NRT.png",
+    skills: ["React", "Redux", "Tailwind CSS", "PWA"],
+    link: "https://www.cvshealth.com/"
+  },
+  {
+    id: 6,
+    title: "Agri Allies – Farmer Community App",
+    description: "Cross-platform app with multilingual ChatGPT chatbot, image-based queries, and real-time discussions for 5,000+ farmers.",
+    period: "2022.08 - 2023.12",
+    image: "/projects/agri/screenshot.png",
+    skills: ["React Native", "Firebase", "OpenAI API"],
+    link: "https://encora.com"
+  },
+  {
+    id: 7,
+    title: "The Fan Lounge – OTT Platform",
+    description: "Fan-focused OTT app with live scores, monetization via AdMob, Azure analytics, and App Store deployment for cross-platform engagement.",
+    period: "2019.01 - 2022.08",
+    image: "/companyicon/theFanLaunge.png",
+    skills: ["React", "React Native", "Azure App Center", "AdMob"],
+    link: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/atmecsinc1613502902599.atmecs_fanlounge?tab=overview"
+  },
+  {
+    id: 8,
+    title: "Northgate – UK Police Control Room UI",
+    description: "Mission-critical app for emergency response with real-time UI, filters, and pagination. Supported <500ms actions for 5,000+ users.",
+    period: "2019.01 - 2022.08",
+    image: "/companyicon/northgate.png",
+    skills: ["React", "REST APIs", "Redux"],
+    link: "https://www.police.uk/pu/your-area/sussex-police/northgate/?yourlocalpolicingteam=about-us"
   }
 ];
 
