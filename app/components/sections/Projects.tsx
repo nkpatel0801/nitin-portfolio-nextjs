@@ -36,7 +36,7 @@ const projects: Project[] = [
     id: 1,
     title: "Riyad Bank – Carpool App",
     description: "A secure ride-sharing app built for bank employees with SSO login, real-time ride matching, route optimization (Google Maps API), and periodic background sync for updated ride statuses.",
-    period: "2023.12 - Present",
+    period: "2024.9 - 2025.5",
     image: "/companyicon/riyad-home.png",
     skills: ["React Native", "SSO", "Google Maps API", "Firebase"],
     link: "https://riyadbank.com"
@@ -45,7 +45,7 @@ const projects: Project[] = [
     id: 2,
     title: "Mashreq Bank – Web & Mobile Banking Platform",
     description: "High-performance digital banking platform with biometric login, session management, real-time alerts, and optimized architecture achieving 92% Lighthouse performance.",
-    period: "2023.12 - Present",
+    period: "2024.04 - 2024.9",
     image: "/companyicon/mashreq-home.png",
     skills: ["React", "React Native", "Firebase", "Redux"],
     link: "https://mashreqbank.com"
@@ -54,7 +54,7 @@ const projects: Project[] = [
     id: 3,
     title: "Maruti Suzuki – Dealer Mobility App",
     description: "Mobile app for Maruti dealers with features like service booking, digital docs, and roadside assistance. Integrated REST APIs, real-time tracking, and 90%+ test coverage.",
-    period: "2023.12 - Present",
+    period: "2023.12 - 2024.3",
     image: "/companyicon/maruti-home.png",
     skills: ["React Native", "Firebase", "REST APIs", "Jest"],
     link: "https://marutisuzuki.com"
@@ -77,17 +77,17 @@ const projects: Project[] = [
     skills: ["React", "Redux", "Tailwind CSS", "PWA"],
     link: "https://www.cvshealth.com/"
   },
+  // {
+  //   id: 6,
+  //   title: "Agri Allies – Farmer Community App",
+  //   description: "Cross-platform app with multilingual ChatGPT chatbot, image-based queries, and real-time discussions for 5,000+ farmers.",
+  //   period: "2022.08 - 2023.12",
+  //   image: "/projects/agri/screenshot.png",
+  //   skills: ["React Native", "Firebase", "OpenAI API"],
+  //   link: "https://encora.com"
+  // },
   {
     id: 6,
-    title: "Agri Allies – Farmer Community App",
-    description: "Cross-platform app with multilingual ChatGPT chatbot, image-based queries, and real-time discussions for 5,000+ farmers.",
-    period: "2022.08 - 2023.12",
-    image: "/projects/agri/screenshot.png",
-    skills: ["React Native", "Firebase", "OpenAI API"],
-    link: "https://encora.com"
-  },
-  {
-    id: 7,
     title: "The Fan Lounge – OTT Platform",
     description: "Fan-focused OTT app with live scores, monetization via AdMob, Azure analytics, and App Store deployment for cross-platform engagement.",
     period: "2019.01 - 2022.08",
@@ -96,7 +96,7 @@ const projects: Project[] = [
     link: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/atmecsinc1613502902599.atmecs_fanlounge?tab=overview"
   },
   {
-    id: 8,
+    id: 7,
     title: "Northgate – UK Police Control Room UI",
     description: "Mission-critical app for emergency response with real-time UI, filters, and pagination. Supported <500ms actions for 5,000+ users.",
     period: "2019.01 - 2022.08",
@@ -143,7 +143,7 @@ export default function Projects() {
                     setModalOpen(true)
                   }}
                   className="
-                    bg-white/[0.1] dark:bg-black/[0.2]
+                    bg-[#a7989833]
                     backdrop-blur-[20px]
                     rounded-2xl
                     border border-white/[0.1] dark:border-white/[0.1]
@@ -167,11 +167,11 @@ export default function Projects() {
                     {project.title}
                   </h2>
                   
-                  <p className="text-base text-gray-600 dark:text-gray-400 mb-2">
+                  <p className="text-base text-gray-600 dark:text-[#f96e91] mb-2">
                     {project.period}
                   </p>
                   
-                  <p className="text-base text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                  <p className="text-base text-gray-600 dark:text-white mb-4 line-clamp-2">
                     {project.description}
                   </p>
                   
@@ -183,11 +183,10 @@ export default function Projects() {
                           px-3 py-1
                           text-sm
                           rounded-full
-                          bg-white/[0.05] dark:bg-white/[0.05]
+                          bg-[#8e73ba] dark:bg-[#8e73ba]
                           backdrop-blur-[8px]
                           border border-white/[0.05]
-                          text-gray-600 dark:text-gray-400
-                        "
+                          text-white dark:text-white"
                       >
                         {skill}
                       </span>

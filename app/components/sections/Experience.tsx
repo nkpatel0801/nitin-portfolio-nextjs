@@ -100,11 +100,11 @@ export default function Experience() {
               <AnimatedText>
                 <div 
                   onClick={() => {
-                    setSelectedExperience(experience.id)
-                    setModalOpen(true)
+                    // setSelectedExperience(experience.id)
+                    // setModalOpen(true)
                   }}
                   className="
-                    bg-white/[0.1] dark:bg-black/[0.2]
+                    bg-[#a7989833]
                     backdrop-blur-[20px]
                     rounded-2xl
                     border border-white/[0.1] dark:border-white/[0.1]
@@ -135,17 +135,17 @@ export default function Experience() {
                         {experience.title}
                       </h3>
                       
-                      <p className="text-base text-gray-600 dark:text-gray-400">
+                      <p className="text-base text-gray-600 dark:text-white">
                         {experience.company}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-base text-gray-600 dark:text-gray-400 mb-4">
+                  <p className="text-[#299396] text-base dark:text-[#FCCB91] mb-4">
                     {experience.period}
                   </p>
                   
-                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                  <p className="text-lg text-gray-600 dark:text-white mb-6">
                     {experience.description}
                   </p>
                   
@@ -157,11 +157,9 @@ export default function Experience() {
                           px-3 py-1
                           text-sm
                           rounded-full
-                          bg-white/[0.05] dark:bg-white/[0.05]
-                          backdrop-blur-[8px]
+                          bg-[#299396] backdrop-blur-[8px]
                           border border-white/[0.05]
-                          text-gray-600 dark:text-gray-400
-                        "
+                          text-white dark:text-white"
                       >
                         {skill}
                       </span>

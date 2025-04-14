@@ -25,7 +25,7 @@ export default function About() {
 
           <AnimatedText>
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Personal Interests</h2>
+              <h2 className="text-2xl font-semibold text-[#80deea]">Personal Interests</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
               Beyond coding, I enjoy exploring the latest in AI tools, experimenting with new frontend stacks, and continuously learning ways to make products faster, cleaner, and more intuitive.              </p>
             </div>
@@ -33,7 +33,7 @@ export default function About() {
 
           <AnimatedText>
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Career Goals</h2>
+              <h2 className="text-2xl font-semibold text-[#80deea]">Career Goals</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
               I'm currently seeking opportunities where I can continue to grow as a Senior Frontend Engineer—contributing to innovative products, leading frontend architecture, and working with cross-functional teams to deliver impactful digital experiences.              </p>
             </div>

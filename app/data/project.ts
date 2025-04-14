@@ -23,7 +23,7 @@ export type ProjectDetail = {
   }[]
 }
 
-// Project data mapping object
+// todo: Project data mapping object - add for every new project modal details
 export const PROJECT_DATA: Record<number, ProjectDetail> = {
   1: {
     id: 1,
@@ -58,7 +58,7 @@ export const PROJECT_DATA: Record<number, ProjectDetail> = {
   ],
     achievements: [
       { metric: "Employee Adoption Rate", value: "95%+", change: 95 },
-      { metric: "Matching Accuracy", value: "Improved by 40%", change: 40 },
+      { metric: "Improved Matching Accuracy", value: "40%", change: 40 },
       { metric: "Sync Latency", value: "<1.2s", change: 100 },
     ],
   },
@@ -135,7 +135,7 @@ export const PROJECT_DATA: Record<number, ProjectDetail> = {
     ],
     achievements: [
       { metric: "Unit Test Coverage", value: "90%+", change: 90 },
-      { metric: "Dealer Accessibility", value: "Improved by 25%", change: 100 },
+      { metric: "Improved Dealer Accessibility", value: "25%", change: 100 },
       {
         metric: "Cross-platform Compatibility",
         value: "100%",
@@ -143,6 +143,178 @@ export const PROJECT_DATA: Record<number, ProjectDetail> = {
       },
     ],
   },
+  4: {
+    id: 4,
+    title: "Change Healthcare – Health Management System",
+    company: "Encora Digital LLC",
+    overview:
+      "A healthcare dashboard and scheduling system for hospitals with modern UI, improved responsiveness, and real-time updates.",
+    mainImage: "/companyicon/chc1.jpg",
+    link: "https://www.changehealthcare.com/",
+    features: [
+      {
+        title: "Modern UI & Dashboards",
+        description:
+          "Rebuilt the legacy system into a modern responsive React app, improving load times and usability.",
+        image: "/companyicon/chc1.jpg",
+      },
+      {
+        title: "Task Automation & Notifications",
+        description:
+          "Implemented workflows and push notifications to automate scheduling and reduce staff workload.",
+        image: "/companyicon/chc1.jpg",
+      },
+    ],
+    techStack: [
+      { category: "Frontend", items: ["React", "Next.js", "Redux", "Jest"] },
+      { category: "Backend", items: ["PostgresSQL"] },
+      { category: "Tools", items: ["VS Code", "Postman", "Git"] },
+      { category: "infrastructure", items: ["aws"] },
+    ],
+    achievements: [
+      { metric: "Improved User Engagement", value: "35%", change: 35 },
+      { metric: "Reduced Load Time", value: "40%", change: 40 },
+      { metric: "Daily Active Users", value: "10K+", change: 100 },
+    ],
+  },
+  5: {
+    id: 5,
+    title: "CVS – Nicotine Replacement Therapy (NRT)",
+    company: "Encora Digital LLC",
+    overview:
+      "A PWA-enabled smoking cessation app that helps users track progress and receive milestone reminders with offline support.",
+    mainImage: "/companyicon/nrt1.png",
+    link: "https://www.cvs.com/",
+    features: [
+      {
+        title: "Milestone Tracking & Reminders",
+        description:
+          "Users receive motivational alerts and can track progress offline.",
+        image: "/companyicon/nrt4.png",
+      },
+      {
+        title: "PWA & Offline Support",
+        description:
+          "Built as a PWA to provide access and functionality without internet connection.",
+        image: "/companyicon/nrt2.png",
+      },
+    ],
+    techStack: [
+      { category: "Frontend", items: ["React", "Redux", "Jest"] },
+      { category: "Backend", items: ["Firebase"] },
+      { category: "Tools", items: ["VS Code", "Postman", "Git"] },
+      { category: "infrastructure", items: ["GitHub Actions"] },
+    ],
+    achievements: [
+      { metric: "Increased Therapy Completion", value: "30%", change: 30 },
+      { metric: "Offline Access", value: "100%", change: 100 },
+      { metric: "Increased User Retention", value: "20%", change: 20 },
+    ],
+  },
+  // 6: {
+  //   id: 6,
+  //   title: "Agri Allies – Farmer Community App",
+  //   company: "Encora Digital LLC",
+  //   overview:
+  //     "A community mobile app that connects 5,000+ farmers for support, shared resources, and AI-driven chatbot assistance.",
+  //   mainImage: "/companyicon/agri-allies.png",
+  //   link: "https://agri-allies.org/",
+  //   features: [
+  //     {
+  //       title: "Multilingual AI Chatbot",
+  //       description:
+  //         "Integrated OpenAI APIs to offer 24/7 automated support in 5 regional languages.",
+  //       image: "/companyicon/agri-chatbot.png",
+  //     },
+  //     {
+  //       title: "Community Support & Posts",
+  //       description:
+  //         "Farmers can share queries, images, and participate in topic discussions.",
+  //       image: "/companyicon/agri-community.png",
+  //     },
+  //   ],
+  //   techStack: [
+  //     { category: "Frontend", items: ["React Native", "React", "Firebase"] },
+  //     { category: "Backend", items: ["Firebase Functions"] },
+  //     { category: "Tools", items: ["VS Code", "GitHub", "Git"] },
+  //     { category: "infrastructure", items: ["Firebase", "OpenAI"] },
+  //   ],
+  //   achievements: [
+  //     { metric: "Farmer Reach", value: "5,000+", change: 100 },
+  //     { metric: "Support Queries", value: "Reduced by 50%", change: 50 },
+  //     { metric: "Engagement", value: "High Community Involvement", change: 80 },
+  //   ],
+  // },
+  6: {
+    id: 6,
+    title: "The Fan Lounge – OTT Sports Platform",
+    company: "ATMECS Technologies",
+    overview:
+      "A scalable OTT platform providing sports content, live scores, and personalized fan experiences with monetization.",
+    mainImage: "/companyicon/theFanLaunge.png",
+    link: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/atmecsinc1613502902599.atmecs_fanlounge?tab=overview",
+    features: [
+      {
+        title: "Live Scores & Streaming",
+        description:
+          "Delivered real-time sports content with live updates and personalized feeds.",
+        image: "/companyicon/theFanLaunge.png",
+      },
+      {
+        title: "AdMonetization & Analytics",
+        description:
+          "Integrated Google AdMob and analytics for revenue tracking and user retention insights.",
+        image: "/companyicon/theFanLaunge.png",
+      },
+    ],
+    techStack: [
+      { category: "Frontend", items: ["React Native", "React", "Redux"] },
+      { category: "Backend", items: ["Node.js", "Express"] },
+      { category: "Tools", items: ["VS Code", "Postman", "Git"] },
+      { category: "infrastructure", items: ["Azure"] },
+    ],
+    achievements: [
+      { metric: "Monthly Revenue Growth", value: "+15%", change: 15 },
+      { metric: "Boosted User Engagement", value: "40%", change: 40 },
+      { metric: "Cross-Platform Users", value: "50K+", change: 100 },
+    ],
+  },
+  7: {
+    id: 7,
+    title: "Northgate – UK Police Control Room Application",
+    company: "ATMECS Technologies",
+    overview:
+      "A mission-critical control room interface for UK police operations enabling real-time actions, rapid emergency response, and secure access workflows.",
+    mainImage: "/companyicon/northgate.png",
+    link: "https://www.police.uk/pu/your-area/sussex-police/northgate/?yourlocalpolicingteam=about-us&tab=stopandsearch",
+    features: [
+      {
+        title: "Real-Time Operations UI",
+        description:
+          "Built responsive UI components to handle critical emergency actions under 500ms latency.",
+        image: "/companyicon/north1.png",
+      },
+      {
+        title: "Filtered Views & Authentication",
+        description:
+          "Implemented filterable views, secure login, and data pagination for efficient officer access.",
+        image: "/companyicon/north2.png",
+      },
+    ],
+    techStack: [
+      { category: "Frontend", items: ["React", "Redux", "SASS"] },
+      { category: "Backend", items: ["Node.js", "Express"] },
+      { category: "Tools", items: ["VS Code", "Git", "Postman"] },
+      { category: "infrastructure", items: ["Azure"] },
+    ],
+    achievements: [
+      { metric: "Response Time", value: "<500ms", change: 100 },
+      { metric: "Active Users", value: "5,000+", change: 100 },
+      { metric: "System Uptime", value: "99.99%", change: 99.99 },
+    ],
+  },
+
+
 };
 
 // Helper function: Get project by ID

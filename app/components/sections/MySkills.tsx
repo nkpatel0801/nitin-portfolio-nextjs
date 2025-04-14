@@ -39,7 +39,7 @@ const technologies = {
 
     // Utilities & Dev Workflow
     { name: 'Figma', icon: '/skills/Figma.svg' },
-    { name: 'Github Actions', icon: '/skills/Github Actions.svg' },
+    { name: 'Github Actions', icon: '/skills/githubactions.svg' },
     { name: 'Azure DevOps', icon: '/skills/Azure.svg' },
     { name: 'SonarQube', icon: '/skills/SonarQube.svg' },
     { name: 'Jira', icon: '/skills/Jira.svg' },

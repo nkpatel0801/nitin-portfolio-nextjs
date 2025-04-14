@@ -90,7 +90,7 @@ export default function CourseTimeline() {
                 <p className="
                   text-xs                               /* Mobile: 12px */
                   sm:text-sm md:text-base              /* sm: 14px, md: 16px */
-                  text-foreground/60 
+                  text-[#80DEEA] 
                   mb-1
                 ">
                   {course.date}

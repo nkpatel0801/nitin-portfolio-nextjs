@@ -37,9 +37,10 @@ export default function Hero() {
         <AnimatedText className="flex flex-wrap gap-4 items-center justify-center sm:flex-row">
           <a
             className="
-      relative z-20 rounded-full border border-black/[.08] dark:border-white/[.145] 
+      relative z-20 rounded-full border border-white/[.145] dark:border-white/[.145] 
       transition-colors flex items-center justify-center 
-      bg-[#4CAF50] hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
+      bg-[#45A045] hover:bg-[#4CAF50] 
+      shadow-[0_4px_12px_rgba(255,255,255,0.25)]
       h-12 px-5 text-base min-w-[160px] sm:min-w-fit"
             href="https://github.com/baghel-nitin"
             target="_blank"
@@ -59,7 +60,8 @@ export default function Hero() {
             className="
       rounded-full border border-black/[.08] dark:border-white/[.145] 
       transition-colors flex items-center justify-center 
-      bg-[#1E90FF] hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
+      bg-[#1E90FF] dark:hover:bg-[#3FA9FF] 
+      shadow-[0_4px_12px_rgba(255,255,255,0.25)]
       h-12 px-5 text-base min-w-[160px] sm:min-w-fit"
             href="/Nitin_Baghel_Resume_2025.pdf"
             target="_blank"
@@ -78,7 +80,8 @@ export default function Hero() {
             className="
       relative z-20 rounded-full border border-black/[.08] dark:border-white/[.145] 
       transition-colors flex items-center justify-center 
-      bg-[#D93025] hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
+      bg-[#D93025] dark:hover:bg-[#E0443A] 
+      shadow-[0_4px_12px_rgba(255,255,255,0.25)]
       h-12 px-5 text-base min-w-[160px] sm:min-w-fit"
             href="mailto:baghelnitin1995@gmail.com"
           >
@@ -97,7 +100,8 @@ export default function Hero() {
             className="
       relative z-20 rounded-full border border-black/[.08] dark:border-white/[.145] 
       transition-colors flex items-center justify-center 
-      bg-[#9C27B0] hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] 
+      bg-[#9C27B0] dark:hover:bg-[#A740BF] 
+      shadow-[0_4px_12px_rgba(255,255,255,0.25)]
       h-12 px-5 text-base min-w-[160px] sm:min-w-fit"
             href="https://www.linkedin.com/in/nitin-b-82415b97/"
             target="_blank"
