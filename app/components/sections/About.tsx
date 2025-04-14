@@ -1,5 +1,4 @@
 'use client'
-
 import AnimatedText from "../common/AnimatedText"
 
 export default function About() {
