@@ -28,7 +28,7 @@ const technologies = {
     { name: 'GraphQL', icon: '/skills/GraphQL.svg' },
     { name: 'Apollo Client', icon: '/skills/apollo.svg' },
     { name: 'Socket.io', icon: '/skills/socketio.svg' },
-    { name: 'Firebase', icon: '/skills/Firebase.svg' },
+    { name: 'Firebase', icon: '/skills/firebase.svg' },
     { name: 'AWS', icon: '/skills/aws.svg' },
 
     // Testing / Performance / Advanced Tools
@@ -40,7 +40,7 @@ const technologies = {
     // Utilities & Dev Workflow
     { name: 'Figma', icon: '/skills/Figma.svg' },
     { name: 'Github Actions', icon: '/skills/githubactions.svg' },
-    { name: 'Azure DevOps', icon: '/skills/Azure.svg' },
+    { name: 'Azure DevOps', icon: '/skills/azure.svg' },
     { name: 'SonarQube', icon: '/skills/SonarQube.svg' },
     { name: 'Jira', icon: '/skills/Jira.svg' },
     { name: 'Yarn', icon: '/skills/Yarn.svg' },
@@ -69,7 +69,7 @@ const technologies = {
   tools: [
     { name: 'Git', icon: '/skills/git.svg' },
     { name: 'VS Code', icon: '/skills/vscode.svg' },
-    { name: 'Postman', icon: '/skills/Postman.svg' },
+    { name: 'Postman', icon: '/skills/postman.svg' },
     { name: 'Android Studio', icon: '/skills/androidstudio.svg' },
   ]
 }
