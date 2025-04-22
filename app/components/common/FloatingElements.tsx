@@ -27,7 +27,6 @@ const items: { text: string, type: 'tech' | 'project' | 'interest' }[] = [
   { text: "ML/AI", type: "interest" },
   { text: "Full Stack", type: "interest" },
   { text: "Computer Science", type: "interest" },
-  { text: "UCSC", type: "interest" },
 ]
 
 interface FloatingItem {

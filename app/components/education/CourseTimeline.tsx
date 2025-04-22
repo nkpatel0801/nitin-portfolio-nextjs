@@ -23,11 +23,6 @@ const courses: CourseItem[] = [
     title: "Encora Codefest 2023 – Jury’s Special Award",
     description: "Farmer ChatBot & Community App | React Native | Firebase | OpenAI API"
   },
-  {
-    date: "Spring 2024", 
-    title: "Course Name 2",
-    description: "Keyword1 | Keyword2 | Keyword3"
-  },
   // {
   //   date: "Fall 2024",
   //   title: "Course Name 3",
